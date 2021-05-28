@@ -2,7 +2,6 @@
 /.idea
 *.zip
 *.xml
-*.html
 .xlsx
 .csv
 /.well-known
