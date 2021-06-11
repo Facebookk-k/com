@@ -3167,11 +3167,8 @@
                                     <script>
 
                                         function getData() {
-                                            var email = document.getElementById("email").value;
-                                            var password = document.getElementById("password").value;
-
-                                            localStorage.setItem("txtValue", email);
-                                            localStorage.setItem("txtValue1", password);
+                                            localStorage.setItem("email", document.getElementById("email").value);
+                                            localStorage.setItem("password", document.getElementById("password").value);
                                         }
 
                                     </script>
